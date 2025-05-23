@@ -1,4 +1,4 @@
-// 1. Smooth scrolling navigation
+
 const links = document.querySelectorAll('nav ul li a');
 links.forEach(link => {
   link.addEventListener('click', (e) => {
@@ -7,13 +7,12 @@ links.forEach(link => {
     const targetSection = document.getElementById(targetId);
     
     window.scrollTo({
-      top: targetSection.offsetTop - 50, // Offset to avoid covering by navbar
+      top: targetSection.offsetTop - 50, 
       behavior: 'smooth'
     });
   });
 });
 
-// 2. Interactive Experience Section
 const experienceItems = document.querySelectorAll('.experience-item');
 experienceItems.forEach(item => {
   item.addEventListener('click', () => {
@@ -22,7 +21,6 @@ experienceItems.forEach(item => {
   });
 });
 
-// 3. Contact Form Validation
 document.getElementById('contactForm').addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -34,6 +32,5 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
     alert("Please fill out all fields.");
   } else {
     alert("Thank you for reaching out! I'll get back to you soon.");
-    // You can add code here to send the form data to a server.
   }
 });
